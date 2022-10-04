@@ -1,0 +1,164 @@
+:root {
+  --primary-color: #f2c94c;
+  --secondary-color: #fff;
+  --text-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* General style */
+
+body {
+  font-family: "Kalam", cursive;
+  color: var(--text-color);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+button:focus,
+textarea:focus {
+  outline: none;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.header,
+.footer {
+  background-color: var(--primary-color);
+}
+
+.text {
+  font-size: 2rem;
+  margin: 1.25rem 0;
+  line-height: 2.5rem;
+}
+
+/* Nav Style Section */
+
+.nav {
+  font-size: 2.4rem;
+  padding: 1.5rem 4rem;
+}
+
+/* Main Container Style Section */
+
+.main-container {
+  display: grid;
+  grid-template-columns: 20fr 85fr;
+  margin: 0 1rem;
+}
+
+.main {
+  max-width: 95rem;
+  padding: 4rem 2rem;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  min-height: 16rem;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  resize: none;
+}
+
+.user-input {
+  margin-bottom: 2rem;
+}
+
+.btn-translate-input {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 2rem;
+  padding: 1.2rem 2rem;
+  background-color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.emoji {
+  margin-left: 5px;
+}
+
+/* Footer Style Section */
+
+.footer {
+  padding: 1.5rem 3rem;
+}
+
+.footer .text {
+  max-width: 65rem;
+  margin: auto;
+}
+
+.footer-heading {
+  font-size: 2.4rem;
+}
+
+.name {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+
+/* Media Query */
+
+/*  544px = 34rem */
+@media (min-width: 34rem) {
+  .minion-img {
+    background-image: url(./Assests/minion.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 15rem;
+    height: 43.5rem;
+  }
+}
+
+/*  864px = 54rem */
+@media (min-width: 54rem) {
+  .minion-img {
+    width: 20rem;
+    margin-left: 1rem;
+  }
+}
+
+/*  1200px = 75rem */
+@media (min-width: 75rem) {
+  .minion-img {
+    width: 30rem;
+  }
+}
+
+/*  543.8px = 33.99rem */
+@media (max-width: 33.99rem) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*  432px = 27rem */
+@media (max-width: 27em) {
+  html {
+    /* 9.5px / 16px  */
+    font-size: 59.375%;
+  }
+}
