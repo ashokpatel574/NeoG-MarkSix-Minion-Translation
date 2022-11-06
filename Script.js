@@ -17,7 +17,7 @@
       // If no input for translation is entered then throw alert message
       if (text === "") {
         throw new Error(
-          "Please enter your message below in input box for translation"
+          "Please enter your message above in input box for translation"
         );
       }
 
@@ -32,12 +32,16 @@
 
       // To display fetched data in display section box
       displayText.innerText = data.contents.translated;
+      displayText.style.border = "1px solid #ccc";
+
+      // To display error message in output textarea  section box
     } catch (error) {
-      alert(
-        `Something went wrong 💥💥 ${error.status || ""} ${
-          error.message || " "
-        }. Try again!`
-      );
+      displayText.style.border = "2px solid red";
+      displayText.innerText = `Something went wrong 💥💥 ${
+        error.status || ""
+      } ${error.message || " "}. Try again!`;
+    } finally {
+      displayText.scrollIntoView({ behavior: "smooth" });
     }
   }
 

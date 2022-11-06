@@ -15,6 +15,7 @@ html {
   /* 10px / 16px = 0.625 = 62.5% */
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -24,7 +25,9 @@ body {
   font-family: "Kalam", cursive;
   color: var(--text-color);
   overflow-x: hidden;
-  min-height: 100vh;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 button:focus,
@@ -103,6 +106,7 @@ textarea {
 
 .footer {
   padding: 1.5rem 3rem;
+  margin-top: auto;
 }
 
 .footer .text {
